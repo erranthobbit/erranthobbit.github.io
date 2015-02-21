@@ -1,7 +1,43 @@
 * { margin: 0; padding: 0; }
-/*ul { display: table; margin: 75 auto; } */
 ul { margin: 75px 100px; font-size: 100%;}
 ul li { float: left; list-style-type: none; }
-ul li a { background: #E9E9E9; color: black; display: block; font-family: 'aaarghnormal', sans-serif; padding: 25px 50px; text-decoration: none; }
-ul li a:hover { background: #424242; color: white;}
+ul li a { 
+	background: #E9E9E9;
+	color: black;
+	display: block;
+	font-family: 'aaarghnormal', sans-serif;
+	font-weight: bold;
+	padding: 25px 50px;
+	text-decoration: none;
+}
+ul li a:hover { 
+	background: #A3A3A3;
+	color: white;
+	display: block;
+	font-family: 'aaarghnormal', sans-serif;
+	font-weight: bold;
+	padding: 25px 50px;
+	text-decoration: none;
+}
+ul .current_page li a  { background: #424242; color: white; }
 .content {margin: 50 100px; font-family: 'aaarghnormal', Helvetica, sans-serif; text-decoration: none; font-size: 100%;}
+/* unvisited link */
+.content a:link {
+	font-weight: bold;
+    color: black;
+}
+/* visited link */
+.content a:visited {
+	font-weight: bold;
+    color: #535353;
+}
+/* mouse over link */
+.content a:hover {
+	font-weight: bold;
+    color: #A3A3A3;
+}
+/* selected link */
+.content a:active {
+	font-weight: bold;
+    color: black;
+}
