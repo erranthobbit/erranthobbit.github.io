@@ -59,7 +59,7 @@ table {
 /* BASIC STYLES - START */
  
 body {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
     color: #1c1c1c;
 }
  
@@ -164,7 +164,7 @@ a.to_nav:focus {
     zoom: 1.0;
 }
 
-.body-content {margin: 50px 40px 50px 40px; font-family: 'Roboto', sans-serif; text-decoration: none; font-size: 100%;}
+.body-content {margin: 50px 40px 50px 40px; font-family: 'Roboto', sans-serif; text-decoration: none; font-size: 100%; line-height: 150%;}
 .body-content a:link {
 	font-weight: bold;
     color: black;
@@ -238,6 +238,7 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  
   a.to_nav {
     display: none;
   }
