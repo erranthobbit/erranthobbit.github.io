@@ -1,56 +1,66 @@
+<!DOCTYPE html>
 <html>
   <head>
-  <link rel="stylesheet" type="text/css" href="mystyle.css">
-  <link rel="stylesheet" href="fonts/aaargh_normal_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="author" content="Saptarshi Das">
+    <meta name="description" content="Saptarshi Das - Projects">
+    <meta name="keywords" content="Saptarshi Das, saptarshi msu, saptarshi das msu, projects">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <title>Saptarshi Das - Projects</title>
   </head>
-  <body>
-	<ul>
-		<li><a href="index.html">Home</a></li>
-		<div class="current_page"><li><a href="#">Projects</a></li></div>
-		<li><a href="resume.html">Resume</a></li>
-		<li><a href="contact.html">Contact</a></li>
-	</ul>
-	<br>
-	<br>
-	<br>
-	<br>
-	<div class="content">
-		Please find below a list of the various research projects I have been involved with in the recent past.
-		<br><br>
-		<b>NASA Badge System for Team Cohesion and Behavioral Monitoring</b>
-		<br><br>
-		<i>Funded by NASA - Collaboration with team from Department of Psychology(Organizational), MSU</i>
-		<br><br>
-		Developed software components of a wireless, networked wearable badge system for behavioral monitoring of human subjects
-		<br>Data generated is used for analysis of team cohesion dynamics by Psychology researchers from MSU
-		<br>Modalities captured by the badges include motion, position, heart rate, and other environmental conditions
-		<br>Used nesC(TinyOS) for programming the embedded Cricket platform that forms the heart of the badges
-		<br>Rudimentary familiarity with 3D printing and design of the badge cases using Blender
-		<br><br>
-		<b>Ultrasonic Pulse Modems for Event Monitoring and Through-substrate Communication</b>
-		<br><br>
-		<i>Funded by SPG(MSU) and NSF - Collaboration with teams from Electrical and Civil Engineering</i>
-		<br><br>
-		Collaborated in the design of platform architecture for structural health monitoring using energy harvested networked sensing devices
-		<br>Developed an adaptive and energy-efficient networking protocol for energy harvested networked sensing devices and evaluated the same using simulation experiments
-		<br><br>
-		<b>Network Protocol Optimization in Dynamic Traffic Conditions using Evolutionary Approaches</b>
-		<br><br>
-		<i>Course Projects - Mullti-Objective Optimization using Evolutionary Principles / Survey of Evolutionary Algorithms</i>
-		<br><br>
-		Developed an evolutionary algorithm based network protocol optimization using NSGA-II on the ONE simulator
-		<br>Working on development of artificial life based network protocol optimization in the Avida platform
-		<br><br>
-		<b>Investigation of Bluetooth Based RSSI Fingerprinting for Indoor Localization</b>
-		<br><br>
-		<i>Course Project - Advanced Communication and Networking</i>
-		<br><br>
-		Developed an Android application for Bluetooth RSSI fingerprinting (Android SDK and Eclipse)
-		<br>Performed Indoor Localization using Fingerprint data and statistical inference using Bhattacharya distance measure (programmed in MATLAB)
-		<br><br>
-		<b>Final Year Project (Undergraduate)</b>
-		<br><br>
-		Development of Efficient Adaptive Colour Demosaicing and Face Detection Algorithms for Image Processing
-	</div>
+  <body id="projects-body">
+    <header>
+  	    <h1 id="projects-body-header-logo" class="logo"><a href="http://www.egr.msu.edu/~dassapta">Saptarshi Das</a></h1>
+  	    <a id="projects-body-header-to_nav" class="to_nav" href="#primary_nav">Menu</a>
+  	</header>
+	  <div id="projects-body-content" class="body-content">
+	    <p>
+		  Please find below a list of the various research projects I have been involved with in the recent past.
+		  </p>
+		  <h2>1. NASA Badge System for Team Cohesion and Behavioral Monitoring</h2>
+		  Funded by NASA - Collaboration with team from Department of Psychology(Organizational), MSU
+		  <ul class="projects">
+		    <li>Developed software components of a wireless, networked wearable badge system for behavioral monitoring of human subjects</li>
+		    <li>Data generated is used for analysis of team cohesion dynamics by Psychology researchers from MSU</li>
+		    <li>Modalities captured by the badges include motion, position, heart rate, and other environmental conditions</li>
+		    <li>Used nesC(TinyOS) for programming the embedded Cricket platform that forms the heart of the badges</li>
+		    <li>Rudimentary familiarity with 3D printing and design of the badge cases using Blender</li>
+		  </ul>
+		  <h2>2. Ultrasonic Pulse Modems for Event Monitoring and Through-substrate Communication</h2>
+		  Funded by SPG(MSU) and NSF - Collaboration with teams from Electrical and Civil Engineering
+		  <ul class="projects">
+		    <li>Collaborated in the design of platform architecture for structural health monitoring using energy harvested networked sensing devices</li>
+		    <li>Developed an adaptive and energy-efficient networking protocol for energy harvested networked sensing devices and evaluated the same using simulation experiments</li>
+		  </ul>
+		  <h2>3. Network Protocol Optimization in Dynamic Traffic Conditions using Evolutionary Approaches</h2>
+		  Course Projects - Mullti-Objective Optimization using Evolutionary Principles / Survey of Evolutionary Algorithms
+		  <ul class="projects">
+		    <li>Developed an evolutionary algorithm based network protocol optimization using NSGA-II on the ONE simulator</li>
+		    <li>Working on development of artificial life based network protocol optimization in the Avida platform</li>
+		  </ul>
+		  <h2>4. Investigation of Bluetooth Based RSSI Fingerprinting for Indoor Localization</h2>
+		  Course Project - Advanced Communication and Networking
+		  <ul class="projects">
+		    <li>Developed an Android application for Bluetooth RSSI fingerprinting (Android SDK and Eclipse)</li>
+		    <li>Performed Indoor Localization using Fingerprint data and statistical inference using Bhattacharya distance measure (programmed in MATLAB)</li>
+		  </ul>
+		  <h2>5. Final Year Project (Undergraduate)</h2>
+		  <ul class="projects">
+		    <li>Development of Efficient Adaptive Colour Demosaicing and Face Detection Algorithms for Image Processing</li>
+		  </ul>
+	  </div>
+	  <nav id="primary_nav">
+	    <ul>
+	    	<li><a href="index.html">Home</a></li>
+	      <li><a href="projects.html" class="current_page_link">Projects</a></li>
+	      <li><a href="resume.html">Resume</a></li>
+	      <li><a href="contact.html">Contact</a></li>
+	    </ul>
+	  </nav>
+	  <footer>
+	    Created by Saptarshi Das. 2015. Uncopyrighted.
+	  </footer>
   </body>
 </html>

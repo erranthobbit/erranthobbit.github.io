@@ -1,43 +1,274 @@
-* { margin: 0; padding: 0; }
-ul { margin: 75px 100px; font-size: 100%;}
-ul li { float: left; list-style-type: none; }
-ul li a { 
-	background: #E9E9E9;
-	color: black;
-	display: block;
-	font-family: 'aaarghnormal', sans-serif;
-	font-weight: bold;
-	padding: 25px 50px;
-	text-decoration: none;
+/* CSS RESET - START */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-ul li a:hover { 
-	background: #A3A3A3;
-	color: white;
-	display: block;
-	font-family: 'aaarghnormal', sans-serif;
-	font-weight: bold;
-	padding: 25px 50px;
-	text-decoration: none;
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
 }
-ul .current_page li a  { background: #424242; color: white; }
-.content {margin: 50 100px; font-family: 'aaarghnormal', Helvetica, sans-serif; text-decoration: none; font-size: 100%;}
-/* unvisited link */
-.content a:link {
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CSS RESET - END */
+
+/* BASIC STYLES - START */
+ 
+body {
+    font-family: 'Roboto', sans-serif;;
+    color: #1c1c1c;
+}
+ 
+p,
+ul {
+    margin: 0 0 1.5em;
+}
+ 
+ul {
+    list-style: disc;
+    padding: 0 0 0 20px;
+}
+
+a {
+	/*font-weight: bold;*/
+  color: black;
+}
+
+h1 {
+ 
+}
+ 
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  line-height: 1.5em;
+  margin: 0 0 0.5em;
+  font-weight: bold;
+}
+ 
+/*layout*/
+ 
+.wrapper {
+}
+ 
+article {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 10px 20px 0 20px;
+    margin: 10px 0;
+}
+
+header {
+    background: #1c1c1c;
+    padding: 15px 15px;
+}
+ 
+/*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
+header:before,
+header:after {
+  content:"";
+  display:table;
+}
+         
+header:after {
+  clear:both;
+}
+         
+/* For IE 6/7 (trigger hasLayout) */
+header {
+  zoom:1;
+}
+ 
+h1.logo a {
+    color: #d8d8d8;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 25px;
+    float: left;
+    letter-spacing: 0.2em;
+    padding: ;
+}
+ 
+a.to_nav {
+    float: right;
+    color: #d8d8d8;
+    background: #4e4e4e;
+    text-decoration: none;
+    padding: 0px 2px 0px;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 25px;
+    height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+ 
+a.to_nav:hover,
+a.to_nav:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+
+/* BASIC STYLES - END */
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+.body-content {margin: 50px 40px 50px 40px; font-family: 'Roboto', sans-serif; text-decoration: none; font-size: 100%;}
+.body-content a:link {
 	font-weight: bold;
     color: black;
 }
-/* visited link */
-.content a:visited {
-	font-weight: bold;
-    color: #535353;
+
+.current_page_link {
+  background: #424242; color: white;
 }
-/* mouse over link */
-.content a:hover {
-	font-weight: bold;
-    color: #A3A3A3;
+
+.projects {
+  list-style-type: square;
+  margin: 0.5em 0 1.5em;
 }
-/* selected link */
-.content a:active {
+
+.body-content a:visited {
 	font-weight: bold;
-    color: black;
+  color: #535353;
+}
+
+.body-content a:hover {
+	font-weight: bold;
+  color: #A3A3A3;
+}
+
+.body-content a:active {
+	font-weight: bold;
+  color: black;
+}
+
+/*navigation*/
+#primary_nav ul {
+  list-style: none;
+  background: #1c1c1c;
+  padding: 5px 0;
+}
+ 
+#primary_nav li a {
+  display: block;
+  padding: 0px 20px;
+  color: #d8d8d8;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  height: 2em;
+  border-bottom: 1px solid #383838;
+}
+ 
+#primary_nav li:last-child a {
+  border-bottom: none;
+}
+ 
+#primary_nav li a:hover,
+#primary_nav li a:focus {
+  color: #1c1c1c;
+  background: #ccc;
+}
+
+#resume-pdf-view {
+  display: none;
+}
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  text-align: center;
+  font-size: 15px;
+  margin: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  a.to_nav {
+    display: none;
+  }
+  
+  #resume-pdf-view {
+    display: block;
+  }
+  
+  .wrapper {
+    position: relative;
+    width: 768px;
+    margin: auto;
+  }
+  
+  #primary_nav {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+  }
+   
+  #primary_nav li {
+    display: inline;
+  }
+  
+  #primary_nav li a {
+    float: left;
+    border: none;
+    padding: 5 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
 }

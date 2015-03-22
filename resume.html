@@ -1,31 +1,45 @@
+<!DOCTYPE html>
 <html>
   <head>
-  <link rel="stylesheet" type="text/css" href="mystyle.css">
-  <link rel="stylesheet" href="fonts/aaargh_normal_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="author" content="Saptarshi Das">
+    <meta name="description" content="Saptarshi Das - Resume">
+    <meta name="keywords" content="Saptarshi Das, saptarshi msu, saptarshi das msu, resume">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <title>Saptarshi Das - Resume</title>
   </head>
-  <body>
-	<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="projects.html">Projects</a></li>
-		<div class="current_page"><li><a href="#">Resume</a></li></div>
-		<li><a href="contact.html">Contact</a></li>
-	</ul>
-	<br>
-	<br>
-	<br>
-	<br>
-	<div class="content">
-		My latest resume can be downloaded using <a href="files/resume_sd_latest.pdf">this link</a>.
-		<br><br>
-		You can also view the resume inside your browser below.
-		<br><br>
-		(N.B. May not render complete with scrollbars in iOS)
-		<br><br>
-		<object data="files/resume_sd_latest.pdf" type="application/pdf" width="100%" height="100%">
-		  <p>It appears you don't have a PDF plugin for this browser.
-		  No biggie... you can <a href="files/resume_sd_latest.pdf">click here to download the PDF file.</a>
+  <body id=resume-body>
+    <header>
+  	    <h1 id="resume-body-header-logo" class="logo"><a href="http://www.egr.msu.edu/~dassapta">Saptarshi Das</a></h1>
+  	    <a id="resume-body-header-to_nav" class="to_nav" href="#primary_nav">Menu</a>
+  	</header>
+	  <div id="resume-body-content" class="body-content">
+		  <p>
+		    My latest resume can be downloaded using <a href="files/resume_sd_latest.pdf">this link</a>.
 		  </p>
-		</object>
-	</div>
+		  <div id="resume-pdf-view">
+		    <p>
+		    You can also view the resume inside your browser below.
+		    </p>
+		    <object data="files/resume_sd_latest.pdf" type="application/pdf" width="80%" height="100%" style="min-height:400px;display:block;margin-left:auto;margin-right:auto">
+		      <p>It appears you don't have a PDF plugin for this browser.
+		      No problem, you can <a href="files/resume_sd_latest.pdf">click here to download the PDF file.</a>
+		      </p>
+		    </object>
+		  </div>
+	  </div>
+	  <nav id="primary_nav">
+	    <ul>
+	    	<li><a href="index.html">Home</a></li>
+	      <li><a href="projects.html">Projects</a></li>
+	      <li><a href="resume.html" class="current_page_link">Resume</a></li>
+	      <li><a href="contact.html">Contact</a></li>
+	    </ul>
+	  </nav>
+	  <footer>
+	    Created by Saptarshi Das. 2015. Uncopyrighted.
+	  </footer>
   </body>
 </html>
