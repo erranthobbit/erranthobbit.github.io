@@ -1,68 +1,101 @@
-/* CSS RESET - START */
-/* http://meyerweb.com/eric/tools/css/reset/ */
+/**
+ * CSSReset.com - How To Keep Footer At Bottom of Page with CSS
+ * 
+ * Original Tutorial: http://www.cssreset.com/2010/css-tutorials/how-to-keep-footer-at-bottom-of-page-with-css/
+ * License: Free - do whatever you like with it! Credit and linkbacks much appreciated.
+ *
+ * NB: Make sure the value for 'padding-bottom' on #content is equal to or greater than the height of #footer.
+ */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+ /* CSS RESET - START */
+ /* http://meyerweb.com/eric/tools/css/reset/ */
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section, summary,
+ time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     outline: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+ }
 
-ins {
-    text-decoration: none;
-}
-del {
-    text-decoration: line-through;
-}
- 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section {
+     display: block;
+ }
+ body {
+     line-height: 1;
+ }
+ ol, ul {
+     list-style: none;
+ }
+ blockquote, q {
+     quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+     content: '';
+     content: none;
+ }
 
-/* CSS RESET - END */
+ ins {
+     text-decoration: none;
+ }
+ del {
+     text-decoration: line-through;
+ }
+  
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+ }
+
+ /* CSS RESET - END */
+
 
 /* BASIC STYLES - START */
- 
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+html { 
+  background-image: url(files/wall1_compressed.JPG);
+  background-repeat: repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     color: #1c1c1c;
+    background: none;
+    margin: 0;
+    min-height: 100%;
+    opacity: 0.85;
 }
- 
+
 p,
 ul {
     margin: 0 0 1.5em;
@@ -74,7 +107,7 @@ ul {
 }
 
 a {
-	/*font-weight: bold;*/
+  /*font-weight: bold;*/
   color: black;
 }
 
@@ -89,39 +122,38 @@ h2 {
   margin: 0 0 0.5em;
   font-weight: bold;
 }
- 
-/*layout*/
- 
-.wrapper {
-}
- 
-article {
-    border-bottom: 1px solid #d8d8d8;
-    padding: 10px 20px 0 20px;
-    margin: 10px 0;
+
+/* BASIC STYLES - END */
+
+.body-wrapper {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  margin: 0;
 }
 
-header {
-    background: #1c1c1c;
-    padding: 15px 15px;
+.body-header {
+  background: #1c1c1c;
+  padding: 15px 12px 8px 12px;
+  height: 30px;
 }
- 
+
 /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
-header:before,
-header:after {
+.body-header:before,
+.body-header:after {
   content:"";
   display:table;
 }
          
-header:after {
+.body-header:after {
   clear:both;
 }
          
 /* For IE 6/7 (trigger hasLayout) */
-header {
+.body-header {
   zoom:1;
 }
- 
+
 h1.logo a {
     color: #d8d8d8;
     text-decoration: none;
@@ -131,47 +163,58 @@ h1.logo a {
     line-height: 22px;
     float: left;
     letter-spacing: 0.15em;
-    padding: ;
 }
- 
+
 a.to_nav {
     float: right;
     color: #d8d8d8;
     background: #4e4e4e;
     text-decoration: none;
-    padding: 2px 5px 2px 5px;
+    padding: 0px 5px 0px 5px;
     font-size: 75%;
     font-weight: bold;
-    line-height: 25px;
-    height: 25px;
+    line-height: 22px;
+    height: 22px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
 }
- 
+
 a.to_nav:hover,
 a.to_nav:focus {
     color: #1c1c1c;
     background: #ccc;
 }
 
-/* BASIC STYLES - END */
-
 @-ms-viewport{
     width: extend-to-zoom;
     zoom: 1.0;
 }
 
-.body-content {margin: 50px 40px 50px 40px; font-family: 'Raleway', sans-serif; text-decoration: none; font-size: 100%; line-height: 125%;}
-.body-content a:link {
-	font-weight: bold;
-    color: black;
+.body-content  {
+  color: black;
+  background: #fafafa;
+  margin: 10px 10px 10px 10px;
+  padding: 20px 20px 5px 20px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-size: 100%;
+  line-height: 125%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.body-content  a:link {
+  font-weight: bold;
+  color: black;
 }
 
 .current_page_link {
-  background: #424242; color: white;
+  background: #424242;
+  color: white;
 }
 
 .projects {
@@ -180,25 +223,33 @@ a.to_nav:focus {
 }
 
 .body-content a:visited {
-	font-weight: bold;
+  font-weight: bold;
   color: #535353;
 }
 
 .body-content a:hover {
-	font-weight: bold;
+  font-weight: bold;
   color: #A3A3A3;
 }
 
 .body-content a:active {
-	font-weight: bold;
+  font-weight: bold;
   color: black;
 }
 
 /*navigation*/
+#primary_nav {
+  margin: 10px 10px 0px 10px;
+  padding-bottom: 20px; /* Height of the footer element */
+}
+
 #primary_nav ul {
   list-style: none;
   background: #1c1c1c;
   padding: 5px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
  
 #primary_nav li a {
@@ -229,16 +280,28 @@ a.to_nav:focus {
   display: none;
 }
 
-footer {
+.body-footer {
+  color: #d8d8d8;
+  background: #1c1c1c;
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
   font-style: italic;
-  text-align: center;
   font-size: 15px;
-  margin: 50px;
+  padding-top: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   
+  html, body
+  {
+    margin: 0;
+  }
+
   a.to_nav {
     display: none;
   }
@@ -253,11 +316,20 @@ footer {
     margin: auto;
   }
   
+  .body-content  {
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+  }
+
   #primary_nav {
     position: absolute;
     top: 5px;
     right: 10px;
     background: none;
+    margin: 10px 10px 0px 10px;
+    padding-bottom: 20px;
+    margin: 0;
+    padding-bottom: 0px; /* Height of the footer element */
   }
    
   #primary_nav li {
@@ -267,9 +339,26 @@ footer {
   #primary_nav li a {
     float: left;
     border: none;
-    padding: 5 5px;
+    padding: 5 5;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
   }
+
+  .body-footer {
+    margin: 0;
+    color: #d8d8d8;
+    background: #1c1c1c;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    /*padding-top: 10px;*/
+  }
+
 }
