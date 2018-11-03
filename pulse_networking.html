@@ -1,158 +1,102 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-<title>Saptarshi Das - Thesis Project</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/bootstrap-responsive.css">
-<link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
-<script src="js/modernizr-2.5.3.min.js"></script>
-</head>
-<body id="top-section" data-spy="scroll" data-target="#topnav"  data-offset="70" >
-<div class="container">
-  <header>
-    <!-- navbar -->
-    <div id="topnav" class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-          <!-- Collapse - Everything you want hidden at 940px or less, place within here -->
-          <div class="nav-collapse">
-            <!-- Main nav -->
-            <ul  class="nav">
-              <li><a href="https://egr.msu.edu/~dassapta/index.html">Home</a></li>
-              <li><a href="https://egr.msu.edu/~dassapta/projects.html">Projects</a></li>
-              <li><a href="https://egr.msu.edu/~dassapta/resume.html">Resume</a></li>
-              <li><a href="https://egr.msu.edu/~dassapta/contact.html">Contact</a></li>
-            </ul>
-            <!-- ENDS main nav -->
-            <!-- social -->
-            <!-- <ul class="nav pull-right ">
-              <li class="divider-vertical"></li>
-              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Social<b class="caret"></b> </a>
-                <ul class="dropdown-menu social-menu">
-                  <li><a href="#"><i class="social-icon twitter"></i> LinkedIn</a></li>
-                </ul>
-              </li>
-            </ul> -->
-            <!-- ENDS Social -->
-          </div>
-          <!-- ENDS Collapse -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Saptarshi Das">
+    <meta name="description" content="Saptarshi Das - Resume">
+    <meta name="keywords" content="Saptarshi Das, saptarshi msu, saptarshi das msu, thesis">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Saptarshi Das - Thesis Project</title>
+  </head>
+  <body id="thesis-body" class="body">
+    <div id="thesis-body-wrapper" class="body-wrapper">
+      <div id="home-body-header" class="body-header">
+        <h1 id="home-body-header-logo" class="logo">
+          <a href="index.html">Saptarshi Das</a>
+            <a id="home-body-header-to_nav" class="to_nav" href="#primary_nav">Menu</a>
+        </h1>
+      </div>
+      <!-- #home-body-header -->
+      <div id="thesis-body-content" class="body-content">
+        <h2 style='text-transform: none; font-size: 140%; color: #38485e;'>
+          Energy-Aware Pulse Networking for Low-Power Wireless Sensor Networks Powered by Energy Harvesting
+        </h2>
+        <br/>
+        <h2>Introduction</h2>
+        <p>
+          Wireless Sensor Networking (WSN) has opened up a wide array of applications where inexpensive sensor devices (nodes) with network forwarding functions can be seamlessly deployed across a chosen environment for continuous data collection about relevant system parameters over time. Structural health monitoring (e.g. in bridges, aircrafts, etc.) is one such domain where sensor networking has been proposed for maintenance-free continuous sensing and data collection. Such spatio-temporal data can be collated at a central location (called a Base Station) to create a holistic picture of structural health as well as infer and identify damage locations for appropriate and timely intervention. To create true maintenance-free systems, such sensor nodes should ideally be powered by energy harvested from the ambient conditions. Harvesting sources such as sunlight or ambient vibrations, though theoretically infinite in potential, can often be limited in rate of replenishment and erratic in availability. Thus, harvested-energy-powered sensing systems need to be designed with effective and efficient energy management built in.
+        </p>
+        <br/>
+        <h2>Research Objective</h2>
+        <p>
+          WSN applications such as Structural Health Monitoring often involve the need for transport of minimal information e.g. the occurrence of an event (as indicated by threshold crossing for stress / strain, specific crack / fault signatures etc.) and the location of such an event. However, for small-sized data transport traditional packet-based communication protocols introduce significant overhead through use of long preambles and other header information which comprise the bulk of the data transported. Since data transport is one of the prime energy expenses in sensor networking, the overhead in packet-based architectures can lead to significant energy leakage. Our research mainly focuses on developing novel architectures and relevant cross-layer protocols using discrete pulses as opposed to data-heavy packets for transporting event information efficiently and reliably across a wide variety of harvesting situations.
+        </p>
+        <br/>
+        <img src="files/pulse_networking.jpg" style="width:100%; text-align: center;" alt="Structural health monitoring on an airplane stabilizer using a pulse-switching network powered by vibration energy harvesting">
+        <br/>
+        <br/>
+        <div style="font-weight: bold; text-align: center;">Fig. 1 Structural health monitoring on an airplane stabilizer using a pulse-switching network powered by vibration energy harvesting
         </div>
+        <br/>
+        <h2>Proposed Mechanisms</h2>
+        <p>
+          In our research work, we have demonstrated that with use of a time-synchronized frame structure (as shown in Fig. 1), binary event occurrence information (yes / no) as well as event location can be incorporated within a single pulse transmission and its position in time with respect to the established time frame structure. Such a packet-less transmission scheme is shown to produce significant savings in energy usage while trading off some amount of delivery delay performance though remaining within application needs. Energy-awareness syntaxes have also been incorporated into the pulse paradigm for the system to adapt gracefully to abrupt changes in harvesting availability. Simulation studies have been used to validate the efficacy of the energy-aware pulse-based transmission in contrast to packet-based approaches. Application level results have shown that such an architecture is well-suited for embedded sensor applications in structural materials where energy for powering the sensors can be generated from structural vibration harvesting and communication performed through-substrate using ultrasonic channels via piezoelectric transducers.
+          Through collaborations with teams in Civil Engineering at MSU and ECE at Washington University, St Louis, we have evaluated an end-to-end simulated workflow for continuous health monitoring and fault detection on an airplane stabilizer wing structure. This simulation considered through-substrate ultrasonic communication based on the pulse networking architecture and powered by vibration energy harvested from the substrate. A schematic for the simulation study is shown in Fig 1. Work is in progress to implement the evaluated pulse protocols in ultrasonic networking hardware powered by vibration harvesting. A prototype transceiver chip has been developed and characterization for the ultrasonic channel completed. Further work is also being pursued to incorporate node energy generation / consumption predictive mechanisms within the pulse domain which can modulate forwarding decisions based on the predicted energy landscape aiming to maintain network-wide energy neutrality over extended periods. The end goal of the broader collaborative project is to create a through-substrate embedded monitoring system across an airplane wing structure comprised of a network of sensing nodes powered by vibration harvesting and be able to detect and locate faults within the structure with specific spatial and temporal locality.
+        </p>
+        <br/>
+        <h2>Selected Publications</h2>
+        <p>
+          [1] H. Salehi, S. Das, S. Chakrabartty, S. Biswas and R. Burgueno, <span style="font-style: italic; font-weight: bold">"A machine-learning approach for damage detection in aircraft structures using self-powered sensor data"</span>, Accepted for publication in Proceedings of SPIE Smart Structures and Materials + Non-Destructive Evaluation and Health Monitoring, Portland, OR, USA, Mar 2017.
+          <br/>
+          [2] S. Das, H. Salehi, Y. Shi, S. Chakrabartty, R. Burgueno and S. Biswas, <span style="font-style: italic; font-weight: bold">"Towards Packet-less Ultrasonic Sensor Networks for Energy-harvesting Structures"</span></span>, In Elsevier Computer Communications Journal, Dec 2016.
+          <br/>
+          [3] H. Salehi, S. Das, S. Chakrabartty, S. Biswas and R. Burgueno, <span style="font-style: italic; font-weight: bold">"Structural Health Monitoring from Discrete Binary Data through Pattern Recognition"</span>, In Proceedings of Sixth International Conference on Structural Engineering, Mechanics and Computation, Cape Town, South Africa, Sep 2016.
+          <br/>
+          [4] S. Das, Y. Shi, B. Dong and S. Biswas, <span style="font-style: italic"><span style="font-style: italic; font-weight: bold">"Impacts of structural vibration on the performance of ultrasound sensor networks powered by vibration-harvested energy"</span>, In Proceedings of SPIE Smart Structures / NDE 2016 Conference, Symposium on Sensors and Smart Structures Technologies, Las Vegas, NV, USA, Mar 2016.
+          <br/>
+          [5] S. Das, S. Lorenz, B. Dong, Q. Huo, S. Biswas, <span style="font-style: italic; font-weight: bold">"Through-Substrate Event Reporting using Harvested Energy in Ultrasound Sensor Networks"</span></span>, In Proceedings of IEEE Globecom 2015, San Diego, CA, USA, Dec 2015.
+          <br/>
+          [6] H. Salehi, S. Das, S. Chakrabartty, S. Biswas and R. Burgueno, <span style="font-style: italic; font-weight: bold">"Structural Assessment and Damage Identification Algorithms Using Binary Data"</span>, In Proceedings of ASME 2015 Smart Materials, Adaptive Structures and Intelligent Systems Conference, Colorado Springs, Colorado, USA, Sep 2015.
+          <br/>
+          [7] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"A Pulse Switching Paradigm for Ultra Low Power Cellular Sensor Networks"</span>, In Elsevier Pervasive and Mobile Computing (PMC), Volume 13, Pages 221-245, August 2014.
+          <br/>
+          [8] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"Cellular Pulse Switching: An Architecture for Event Sensing and Localization in Sensor Networks"</span>, In Proceedings of 14th International Conference on Distributed Computing and Networking, ICDCN 2013, Mumbai, India, Jan 2013.
+          <br/>
+          [9] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"A Novel Self-organized Distributed Pulse Switching Architecture for Binary Sensing and Actuation applications"</span>, In Proceedings of SPIE Defense, Security and Sensing Symposium, Baltimore, MD, USA, Apr 2013.
+          <br/>
+          [10] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"Pulse Switching: A Packet-less Networking Paradigm for Energy-constrained Monitoring Applications"</span>, Chapter in the book: Wireless Sensor Networks - From Theory to Applications, CRC Press, Editor(s): I. M. M. El Emary and S. Ramakrishnan, ISBN 9781466518100, Aug 2013.
+          <br/>
+          [11] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"Cellular Pulse Switching Architecture for Binary Event Sensing"</span>, In Proceedings of IEEE Globecom 2012, GLOBECOM, Anaheim, CA, USA, Dec 2012.
+          <br/>
+          [12] Q. Huo and S. Biswas, <span style="font-style: italic; font-weight: bold">"A Novel Concept of UWB Pulse Switching in Sensor Networks"</span>, In Proceedings of The Eighth International Conference on Wireless and Mobile Communications, ICWMC 2012, Venice, Italy, Jun 2012. <span style="font-weight: bold">(Best Paper Award)</span>
+          <br/>
+          [13] Q. Huo, A. Plummer and S. Biswas, <span style="font-style: italic; font-weight: bold">"Pulse Switching for Static Event Sensing in Sensor Networks"</span>, In Proceedings of IEEE Globecom 2011, Houston, TX, USA, Dec 2011.
+          <br/>
+          [14] Q. Huo, A. Plummer and S. Biswas, <span style="font-style: italic; font-weight: bold">"Ultra Wide Band Impulse Switching Protocols for Event and Target Tracking Applications"</span>, In Proceedings of IEEE SECON 2011, Salt Lake City, UT, USA, Jun 2011.
+        </ol>
+        </p>
       </div>
+      <!-- #thesis-body-content -->
+      <nav id="primary_nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- #primary-nav -->
+      <div id="thesis-body-footer" class="body-footer">
+        Created by Saptarshi Das. 2018.
+      </div>
+      <!-- #thesis-body-footer -->
     </div>
-    <!-- ENDS navbar -->
-  </header>
-  <!-- MAIN -->
-  <div id="main" role="main">
-    <!-- Hero -->
-    <div class="hero-unit">
-    
-    <h2>Energy-Aware Pulse Networking for Low-Power Wireless Sensor Networks Powered by Energy Harvesting</h2>
-    <p align="justify">
-      <br/>
-      Wireless Sensor Networking (WSN) has opened up a wide array of applications where inexpensive sensor devices (nodes) with network forwarding functions can be seamlessly deployed across a chosen environment for continuous data collection about relevant system parameters over time. Structural health monitoring (e.g. in bridges, aircrafts, etc.) is one such domain where sensor networking has been proposed for maintenance-free continuous sensing and data collection. Such spatio-temporal data can be collated at a central location (called a Base Station) to create a holistic picture of structural health as well as infer and identify damage locations for appropriate and timely intervention. To create true maintenance-free systems, such sensor nodes should ideally be powered by energy harvested from the ambient conditions. Harvesting sources such as sunlight or ambient vibrations, though theoretically infinite in potential, can often be limited in rate of replenishment and erratic in availability. Thus, harvested-energy-powered sensing systems need to be designed with effective and efficient energy management built in.
-      <br/>
-    </p>
-    <br/>
-    <h2>Research Objective</h2>
-    <p align="justify">
-      <br/>
-      WSN applications such as Structural Health Monitoring often involve the need for transport of minimal information e.g. the occurrence of an event (as indicated by threshold crossing for stress / strain, specific crack / fault signatures etc.) and the location of such an event. However, for small-sized data transport traditional packet-based communication protocols introduce significant overhead through use of long preambles and other header information which comprise the bulk of the data transported. Since data transport is one of the prime energy expenses in sensor networking, the overhead in packet-based architectures can lead to significant energy leakage. Our research mainly focuses on developing novel architectures and relevant cross-layer protocols using discrete pulses as opposed to data-heavy packets for transporting event information efficiently and reliably across a wide variety of harvesting situations.
-      <br/>
-    </p>
-    <img src="files/pulse_networking.jpg" style="margin-top:40px; width:100%" alt="DTN Content Dissemination in Social Wireless Networks">
-    <br/>
-    <br/>
-    <span style="font-weight: bold; text-align: center">Fig. 1 Structural health monitoring on an airplane stabilizer using a pulse-switching network powered by vibration energy harvesting</span>
-    <br/>
-    <br/>
-    <h2>Proposed Mechanisms</h2>
-    <p align="justify">
-      <br/> 
-      In our research work, we have demonstrated that with use of a time-synchronized frame structure (as shown in Fig. 1), binary event occurrence information (yes / no) as well as event location can be incorporated within a single pulse transmission and its position in time with respect to the established time frame structure. Such a packet-less transmission scheme is shown to produce significant savings in energy usage while trading off some amount of delivery delay performance though remaining within application needs. Energy-awareness syntaxes have also been incorporated into the pulse paradigm for the system to adapt gracefully to abrupt changes in harvesting availability. Simulation studies have been used to validate the efficacy of the energy-aware pulse-based transmission in contrast to packet-based approaches. Application level results have shown that such an architecture is well-suited for embedded sensor applications in structural materials where energy for powering the sensors can be generated from structural vibration harvesting and communication performed through-substrate using ultrasonic channels via piezoelectric transducers.
-      Through collaborations with teams in Civil Engineering at MSU and ECE at Washington University, St Louis, we have evaluated an end-to-end simulated workflow for continuous health monitoring and fault detection on an airplane stabilizer wing structure. This simulation considered through-substrate ultrasonic communication based on the pulse networking architecture and powered by vibration energy harvested from the substrate. A schematic for the simulation study is shown in Fig 1. Work is in progress to implement the evaluated pulse protocols in ultrasonic networking hardware powered by vibration harvesting. A prototype transceiver chip has been developed and characterization for the ultrasonic channel completed. Further work is also being pursued to incorporate node energy generation / consumption predictive mechanisms within the pulse domain which can modulate forwarding decisions based on the predicted energy landscape aiming to maintain network-wide energy neutrality over extended periods. The end goal of the broader collaborative project is to create a through-substrate embedded monitoring system across an airplane wing structure comprised of a network of sensing nodes powered by vibration harvesting and be able to detect and locate faults within the structure with specific spatial and temporal locality.
-      <br/> 
-    </p>
-    <br/>
-    <h2>Selected Publications</h2>
-    <br/>
-    <p align="justify">
-      [1] H. Salehi, S. Das, S. Chakrabartty, S. Biswas and R. Burgueno, <span style="font-style: italic; font-weight: bold">"A machine-learning approach for damage detection in aircraft structures using self-powered sensor data"</span>, Accepted for publication in Proceedings of SPIE Smart Structures and Materials + Non-Destructive Evaluation and Health Monitoring, Portland, OR, USA, Mar 2017.
-      <br/>
-      [2] S. Das, H. Salehi, Y. Shi, S. Chakrabartty, R. Burgueno and S. Biswas, <span style="font-style: italic; font-weight: bold">"Towards Packet-less Ultrasonic Sensor Networks for Energy-harvesting Structures"</span></span>, In Elsevier Computer Communications Journal, Dec 2016.
-      <br/>
-      [3] H. Salehi, S. Das, S. Chakrabartty, S. Biswas and R. Burgueno, <span style="font-style: italic; font-weight: bold">"Structural Health Monitoring from Discrete Binary Data through Pattern Recognition"</span>, In Proceedings of Sixth International Conference on Structural Engineering, Mechanics and Computation, Cape Town, South Africa, Sep 2016.
-      <br/>
-      [4] S. Das, Y. Shi, B. Dong and S. Biswas, <span style="font-style: italic"><span style="font-style: italic; font-weight: bold">"Impacts of structural vibration on the performance of ultrasound sensor networks powered by vibration-harvested energy"</span>, In Proceedings of SPIE Smart Structures / NDE 2016 Conference, Symposium on Sensors and Smart Structures Technologies, Las Vegas, NV, USA, Mar 2016.
-      <br/>
-      [5] S. Das, S. Lorenz, B. Dong, Q. Huo, S. Biswas, <span style="font-style: italic; font-weight: bold">"Through-Substrate Event Reporting using Harvested Energy in Ultrasound Sensor Networks"</span></span>, In Proceedings of IEEE Globecom 2015, San Diego, CA, USA, Dec 2015.
-      <br/>
-      [6] H. Salehi, S. Das, S. Chakrabartty, S. Biswas and R. Burgueno, <span style="font-style: italic; font-weight: bold">"Structural Assessment and Damage Identification Algorithms Using Binary Data"</span>, In Proceedings of ASME 2015 Smart Materials, Adaptive Structures and Intelligent Systems Conference, Colorado Springs, Colorado, USA, Sep 2015.
-      <br/>
-      [7] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"A Pulse Switching Paradigm for Ultra Low Power Cellular Sensor Networks"</span>, In Elsevier Pervasive and Mobile Computing (PMC), Volume 13, Pages 221-245, August 2014.
-      <br/>
-      [8] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"Cellular Pulse Switching: An Architecture for Event Sensing and Localization in Sensor Networks"</span>, In Proceedings of 14th International Conference on Distributed Computing and Networking, ICDCN 2013, Mumbai, India, Jan 2013.
-      <br/>
-      [9] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"A Novel Self-organized Distributed Pulse Switching Architecture for Binary Sensing and Actuation applications"</span>, In Proceedings of SPIE Defense, Security and Sensing Symposium, Baltimore, MD, USA, Apr 2013.
-      <br/>
-      [10] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"Pulse Switching: A Packet-less Networking Paradigm for Energy-constrained Monitoring Applications"</span>, Chapter in the book: Wireless Sensor Networks - From Theory to Applications, CRC Press, Editor(s): I. M. M. El Emary and S. Ramakrishnan, ISBN 9781466518100, Aug 2013.
-      <br/>
-      [11] Q. Huo, B. Dong and S. Biswas, <span style="font-style: italic; font-weight: bold">"Cellular Pulse Switching Architecture for Binary Event Sensing"</span>, In Proceedings of IEEE Globecom 2012, GLOBECOM, Anaheim, CA, USA, Dec 2012.
-      <br/>
-      [12] Q. Huo and S. Biswas, <span style="font-style: italic; font-weight: bold">"A Novel Concept of UWB Pulse Switching in Sensor Networks"</span>, In Proceedings of The Eighth International Conference on Wireless and Mobile Communications, ICWMC 2012, Venice, Italy, Jun 2012. <span style="font-weight: bold">(Best Paper Award)</span>
-      <br/>
-      [13] Q. Huo, A. Plummer and S. Biswas, <span style="font-style: italic; font-weight: bold">"Pulse Switching for Static Event Sensing in Sensor Networks"</span>, In Proceedings of IEEE Globecom 2011, Houston, TX, USA, Dec 2011.
-      <br/>
-      [14] Q. Huo, A. Plummer and S. Biswas, <span style="font-style: italic; font-weight: bold">"Ultra Wide Band Impulse Switching Protocols for Event and Target Tracking Applications"</span>, In Proceedings of IEEE SECON 2011, Salt Lake City, UT, USA, Jun 2011.
-      <br/>
-    </ol>
-    </p>
-    </div>
-    <!-- ENDS hero -->
-    <!-- Work -->
-    <!-- Contact -->
-    <!-- <section id="contact-section" >
-      <div  class="page-header">
-        <h1>Contact</h1>
-      </div>
-      <div class="row">
-        <P>
-        <div class="span4">
-          <ul class="address-block unstyled">
-              <li class="address"><i class="icon-home"></i> 428 S. Shaw Lane, Room 2120, East Lansing, MI 48824</li>
-            <li class="email"><i class="icon-envelope"></i><a href="#"> hajiagh1 @ msu DOT edu</a></li>
-          </ul>
-        </div>
-      </div>
-    </section> -->
-    <!-- ENDS Contact -->
-  </div>
-  <!-- ENDS MAIN -->
-  <footer>
-    <hr>
-    <p>&copy; Copyright 2017 <a href="#">Saptarshi Das</a> All Rights Reserved | Website Template By <a target="_blank" href="http://www.luiszuno.com">luiszuno</a></p>
-  </footer>
-</div>
-<!-- JavaScript at the bottom for fast page loading -->
-<script src="js/jquery-1.7.1.min.js"></script>
-<!-- scripts concatenated and minified via build script -->
-<script src="js/plugins.js"></script>
-<script src="js/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap-scrollspy.js"></script>
-<script src="js/bootstrap-tab.js"></script>
-<script src="js/bootstrap-collapse.js"></script>
-<script src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-<script src="js/custom.js"></script>
-<!-- end scripts -->
-</body>
+    <!-- #thesis-body-wrapper -->
+  </body>
+  <!-- #thesis-body -->
 </html>
